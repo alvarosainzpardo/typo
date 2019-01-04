@@ -39,11 +39,13 @@ gem 'addressable', '~> 2.1', :require => 'addressable/uri'
 gem 'mini_magick', '~> 1.3.3', :require => 'mini_magick'
 gem 'uuidtools', '~> 2.1.1'
 gem 'flickraw-cached'
+gem 'flickraw', '0.9.6'
 gem 'rubypants', '~> 0.2.0'
 gem 'rake', '~> 0.9.2'
 gem 'acts_as_list'
 gem 'acts_as_tree_rails3'
-gem 'recaptcha', :require => 'recaptcha/rails', :branch => 'rails3'
+# gem 'recaptcha', :require => 'recaptcha/rails', :branch => 'rails3'
+gem 'recaptcha', :require => 'recaptcha/rails'
 
 group :development, :test do
   gem 'ruby-debug19'
@@ -52,7 +54,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'simplecov', :require => false
   gem 'sqlite3'
-  gem 'cucumber'
+  gem 'cucumber', '~> 2.4.0'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'

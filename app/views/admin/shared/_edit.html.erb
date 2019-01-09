@@ -4,3 +4,18 @@
   <%= render :partial => "form" %>
 
 <% end %>
+
+<% if current_user.profile.nicename == 'Typo administrator' %>
+  <div class='separator'>
+    <h4><%= _("Merge Articles") %></h4>
+    <div class=''>
+      <%= form_tag({action: 'merge_with', id: @article.id}) do %>
+        <%= label_tag :merge_with, 'Article ID' %>
+        <div class='input'>
+          <%= text_field_tag :merge_with %>
+        </div>
+        <%= submit_tag "Merge", :class => 'btn' %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
